@@ -24,7 +24,9 @@ namespace NeoCircuitDiagram.Components.Parts
         }
         public void Draw(System.Drawing.Graphics g, System.Drawing.Pen p)
         {
-            g.DrawLine(p, X[0], Y[0], X[1], Y[1]);
+            //g.DrawLine(p, X[0], Y[0], X[1], Y[1]);
+            g.DrawLine(p, X[0], Y[0], X[1], Y[0]);
+            g.DrawLine(p, X[1], Y[0], X[1], Y[1]);
         }
         public bool mouse_On(int x, int y)
         {

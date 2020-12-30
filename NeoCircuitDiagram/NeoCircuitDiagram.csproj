@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\Instances\Motor.cs" />
     <Compile Include="Components\Instances\Source.cs" />
     <Compile Include="Components\Parts\InterfaceCanvas.cs" />
     <Compile Include="Components\Instances\Resistance.cs" />
@@ -93,6 +94,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\source_dc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\motor_dc.png" />
+    <Content Include="Resources\resistance.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

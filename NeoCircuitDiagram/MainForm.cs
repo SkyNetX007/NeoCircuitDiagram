@@ -16,7 +16,6 @@ namespace NeoCircuitDiagram
     {
         Bitmap buffer;
         Graphics bufferGraphics;
-        //Document interfaceDocument;
         InterfaceCanvas componentChosen, wireChosen;
         int mouse_old_X = 0;
         int mouse_old_Y = 0;
@@ -26,7 +25,6 @@ namespace NeoCircuitDiagram
             //buffer = new Bitmap(this.Size.Width, this.Size.Height);
             buffer = new Bitmap(939,535);
             bufferGraphics = Graphics.FromImage(buffer);
-            //interfaceDocument = document;
             InitializeComponent();
         }
         
@@ -47,6 +45,15 @@ namespace NeoCircuitDiagram
         private void button2_Click(object sender, EventArgs e)
         {
             Source ins = new Source();
+            Document.interfaceList.Add(ins);
+            Document.componentList.Add(ins);
+            foreach (Pin pin in ins.pins) { Document.interfaceList.Add(pin); Document.pinList.Add(pin); }
+            CanvasPaint(this.CreateGraphics());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Motor ins = new Motor();
             Document.interfaceList.Add(ins);
             Document.componentList.Add(ins);
             foreach (Pin pin in ins.pins) { Document.interfaceList.Add(pin); Document.pinList.Add(pin); }

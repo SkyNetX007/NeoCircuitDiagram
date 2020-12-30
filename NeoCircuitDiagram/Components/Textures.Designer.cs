@@ -83,5 +83,13 @@ namespace NeoCircuitDiagram.Components {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        internal static System.Drawing.Bitmap motor_dc
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("motor_dc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
