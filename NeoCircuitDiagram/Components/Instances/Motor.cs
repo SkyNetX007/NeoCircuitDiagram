@@ -11,6 +11,8 @@ namespace NeoCircuitDiagram.Components.Instances
         string tag = "Motor";
         Image texture = NeoCircuitDiagram.Components.Textures.motor_dc;
 
+        float r = 0.1f;
+
         public Motor(int x_1 = 190, int y_1 = 40, int x_2 = 245, int y_2 = 90)
         {
             Parts.Pin pin = new NeoCircuitDiagram.Components.Parts.Pin(this, 190, 58, 200, 68);

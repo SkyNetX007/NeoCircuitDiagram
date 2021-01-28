@@ -10,6 +10,8 @@ namespace NeoCircuitDiagram.Components.Instances
         string tag = "source";
         Image texture = NeoCircuitDiagram.Components.Textures.source_dc;
 
+        float voltage = 5.0f;
+
         public Source(int x_1 = 190, int y_1 = 40, int x_2 = 250, int y_2 = 123)
         {
             Parts.Pin pin = new NeoCircuitDiagram.Components.Parts.Pin(this, 215, 40, 225, 50);

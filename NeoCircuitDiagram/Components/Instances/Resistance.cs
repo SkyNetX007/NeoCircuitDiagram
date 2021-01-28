@@ -10,6 +10,8 @@ namespace NeoCircuitDiagram.Components.Instances
         string tag = "resistance";
         Image texture = NeoCircuitDiagram.Components.Textures.resistance;
 
+        float R = 100.0f;
+
         public Resistance(int x_1 = 190, int y_1 = 40, int x_2 = 280, int y_2 = 80)
         {
             Parts.Pin pin = new NeoCircuitDiagram.Components.Parts.Pin(this, 190, 58, 200, 68);

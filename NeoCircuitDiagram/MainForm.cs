@@ -22,7 +22,6 @@ namespace NeoCircuitDiagram
         
         public MainForm()
         {
-            //buffer = new Bitmap(this.Size.Width, this.Size.Height);
             buffer = new Bitmap(939,535);
             bufferGraphics = Graphics.FromImage(buffer);
             InitializeComponent();
@@ -69,12 +68,14 @@ namespace NeoCircuitDiagram
                 if (i.mouse_On(e.X, e.Y))
                 {
                     if (i.Get_type() == "component")
+                    {
                         componentChosen = i;
+                        Document.wireList.Add(i);
+                    }
                     else
                     {
                         Wire w = new Wire(e.X, e.Y, e.X, e.Y, (Pin)i);
                         Document.interfaceList.Add(w);
-                        Document.wireList.Add(w);
                         wireChosen = w;
                     }
                     break;
